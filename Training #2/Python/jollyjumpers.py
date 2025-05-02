@@ -1,42 +1,32 @@
 from sys import stdin as sd
 
-
 def jolly_or_not_jolly(listd):
-    
-    suma = sum(listd)
 
-    n = listd[1]
-
-    suma_2 = (n*(n - 1)) >> 1 #(n*(n+1)) / 2
-
-    if suma == suma_2:
-
-        print('Jolly')
-        
+    n = len(listd)
+    if n == 1:
+        return "Jolly"
     else:
-        print('Not Jolly')
-
-    
-
-
+        m = max(listd[1:])
+        suma = sum(listd) - listd[0]
+        suma_2 = (m*(m + 1)) >> 1 #(n*(n+1)) / 2
+        if (suma == suma_2): 
+            return "Jolly" 
+        else:
+            return "Not Jolly" 
+        
 def main():
    
-    
     line = sd.readline().strip()
-    while line != 0:
+
+    while line != "":
 
         lists = [int(x) for x in line.split()]
         listd = []
 
-        for i in range(0, len(lists), 2):
-            
+        for i in range(1, len(lists)):
             listd.append(abs(lists[i] - lists[i - 1]))
 
-        
-        jolly_or_not_jolly(listd)
-
+        print(jolly_or_not_jolly(listd))
         line = sd.readline().strip()
-
-
 
 main()
