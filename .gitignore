@@ -785,6 +785,8 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+CMakeLists.txt
+
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
