@@ -8,7 +8,7 @@ def solve(names, days, months, years) -> tuple:
     return names[youngest_index], names[oldest_index]
 
 def main():
-    TC = int(stdin.readline().strip())  # Number of people in the class
+    TC = int(stdin.readline().strip())  
     names, days, months, years = [], [], [], []
 
     for _ in range(TC):
@@ -23,7 +23,6 @@ def main():
 
     youngest, oldest = solve(names, days, months, years)
 
-    # Print the youngest and oldest person
     print(youngest)
     print(oldest)
 
