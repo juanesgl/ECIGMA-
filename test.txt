@@ -1,0 +1,51 @@
+#Kattis - Happy and UnHappy numbers
+from sys import stdin
+
+def solve (st, end):
+    
+    memo = {}
+    
+    con = 0
+    for i in range(st, end + 1):
+        p = i
+
+        if i < 10:
+            p = i*10
+
+        if hn(p):
+            con += 1
+
+        memo[]  
+        #print(i, hn(i))
+    
+    return con
+
+def hn(n):
+
+    m = n
+
+    while m >= 10:
+
+        mul = 0
+        conv = str(m)
+        lisnum = list(map(int,conv)) 
+
+        for i in range(len(lisnum)):
+            mul += (lisnum[i])**2 
+
+        m = mul
+        
+    return m == 1
+
+def main():
+    
+    cases = int(stdin.readline().strip())
+    
+    for _ in range(cases):
+
+        user = list(map(int,stdin.readline().split()))
+        res = solve(user[0], user[1]) 
+        
+        print(res)
+
+main()
