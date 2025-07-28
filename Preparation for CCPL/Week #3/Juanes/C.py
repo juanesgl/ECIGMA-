@@ -1,6 +1,5 @@
 from sys import stdin 
 
-
 def tines_finder(l, r):
 
     if l == 0 and r == 0:
